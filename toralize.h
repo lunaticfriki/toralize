@@ -28,6 +28,8 @@ struct proxy_request
     unsigned char userid[8];
 };
 
+typedef struct proxy_request Req;
+
 /* SOCKS4 protocol response
                 +----+----+----+----+----+----+----+----+
                 | VN | CD | DSTPORT |      DSTIP        |
@@ -42,3 +44,5 @@ struct proxy_response
     int16 _;
     int32 __;
 };
+
+typedef struct proxy_response Res;
